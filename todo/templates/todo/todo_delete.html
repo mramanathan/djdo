@@ -1,0 +1,6 @@
+<form action='{{ url }}' method="POST">
+	{% csrf_token %}
+	<p>Do you want to delete '{{ todo.name }}'</p>
+	<input type="submit"  value="Submit">
+	<a href="{% url 'todo_list' %}">Cancel</a>
+</form>

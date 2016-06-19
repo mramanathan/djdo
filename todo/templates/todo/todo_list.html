@@ -1,0 +1,22 @@
+<table>
+	<tr>
+	<td>Id</td>
+	<td>Name</td>
+	<td>To be completed by</td>
+	<td>Completion Status</td>
+	<td>Notes</td>
+	</tr>
+	{% if todos %}
+	{% for todo in todos %}
+	<tr>
+		<td>{{ todo.id }}</td>
+		<td>{{ todo.name }}</td>
+		<td>{{ todo.is_completed }}</td>
+		<td>{{ todo.due_date }}</td>
+		<td>{{ todo.notes }}</td>
+	</tr>
+	{% endfor %}
+	{% else %}
+	<h2>Empty</h2>
+	{% endif %}
+</table>
